@@ -11,6 +11,7 @@ public class MoveWalt : MonoBehaviour
     [SerializeField] private GameObject[] walt;
     private bool dead = false;
     [SerializeField] private GameObject CamScript;
+    [SerializeField] private int KillPos;
     private bool SaulCalled = false;
 
     void start()
@@ -52,7 +53,7 @@ public class MoveWalt : MonoBehaviour
             waltPosition = 0;
         }
         walt[waltPosition].SetActive(true);
-        if (waltPosition == 8)
+        if (waltPosition == KillPos)
         {
             dead = true;
             JumpScare();
