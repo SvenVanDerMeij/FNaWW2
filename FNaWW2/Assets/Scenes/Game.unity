@@ -365,6 +365,10 @@ PrefabInstance:
       value: scoremanager
       objectReference: {fileID: 0}
     - target: {fileID: 5709581332175573224, guid: 6b20193b6e52b8949b442d145b2ca6d3, type: 3}
+      propertyPath: CamScript
+      value: 
+      objectReference: {fileID: 963194225}
+    - target: {fileID: 5709581332175573224, guid: 6b20193b6e52b8949b442d145b2ca6d3, type: 3}
       propertyPath: MethTally
       value: 
       objectReference: {fileID: 2113404861}
@@ -453,6 +457,8 @@ MonoBehaviour:
   - {fileID: 795724854}
   CamScript: {fileID: 963194225}
   KillPos: 3
+  Meth: {fileID: 0}
+  WinScore: 0
 --- !u!4 &169181151
 Transform:
   m_ObjectHideFlags: 0
@@ -4834,7 +4840,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -5611,6 +5617,8 @@ MonoBehaviour:
   - {fileID: 1068116273}
   CamScript: {fileID: 963194225}
   KillPos: 6
+  Meth: {fileID: 1606703341}
+  WinScore: 90
 --- !u!1 &1736758913
 GameObject:
   m_ObjectHideFlags: 0

@@ -82,4 +82,13 @@ public class CamControl : MonoBehaviour
         }
     }
 
+    public void Win()
+    {
+        map.SetActive(false);
+        office.SetActive(false);
+        meth.SetActive(false);
+        cam.SetActive(false);
+        gameObject.transform.position = new Vector3(6.56f, 0, 140);
+    }
+
 }

@@ -13,6 +13,8 @@ public class MoveWalt : MonoBehaviour
     [SerializeField] private GameObject CamScript;
     [SerializeField] private int KillPos;
     private bool SaulCalled = false;
+    [SerializeField] private GameObject Meth;
+    [SerializeField] private int WinScore;
 
     void start()
     {
@@ -58,11 +60,21 @@ public class MoveWalt : MonoBehaviour
             dead = true;
             JumpScare();
         }
+        if (ScoreManager.Instance.CurrentScore >= 50)
+        {
+            dead = true;
+            WinScare();
+        }
     }
 
     private void JumpScare()
     {
         CamScript.GetComponent<CamControl>().Dead();
+    }
+
+    private void WinScare()
+    {
+        CamScript.GetComponent<CamControl>().Win();
     }
 
     public void SaulWasCalled()
