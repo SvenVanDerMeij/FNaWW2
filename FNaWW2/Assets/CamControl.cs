@@ -12,6 +12,7 @@ public class CamControl : MonoBehaviour
     [SerializeField] GameObject cam;
     [SerializeField] GameObject dead;
     [SerializeField] GameObject staticFX;
+    [SerializeField] GameObject office;
     private float deadTimer = 0;
     private bool startTime = false;
     [SerializeField] private GameObject methScript;
@@ -44,6 +45,7 @@ public class CamControl : MonoBehaviour
             camOpen = true;
             map.SetActive(true);
             staticFX.SetActive(true);
+            office.SetActive(false);
             meth.SetActive(false);
             gameObject.transform.position = new Vector3(6.56f, 0, currentCamera);
         }
@@ -51,6 +53,7 @@ public class CamControl : MonoBehaviour
         {
             camOpen = false;
             map.SetActive(false);
+            office.SetActive(true);
             staticFX.SetActive(false);
             meth.SetActive(true);
             gameObject.transform.position = new Vector3(6.56f, 0, 0);
@@ -70,7 +73,7 @@ public class CamControl : MonoBehaviour
         if ((methScript.GetComponent<Methcounter>().methcount) < 100)
         {
             map.SetActive(false);
-            
+            office.SetActive(false);
             meth.SetActive(false);
             cam.SetActive(false);
             gameObject.transform.position = new Vector3(6.56f, 0, 100);

@@ -4,6 +4,7 @@ public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance { get; private set; }
 
+    [SerializeField] private GameObject MethTally;
     public int CurrentScore { get; private set; }
 
     void Awake()
@@ -21,7 +22,7 @@ public class ScoreManager : MonoBehaviour
     public void AddScore(int amount)
     {
         CurrentScore += amount;
-        UIManager.Instance.UpdateScoreText(CurrentScore);
+        MethTally.GetComponent<Methcounter>().Click();
     }
 
     public void ResetScore()
